@@ -246,7 +246,7 @@ $quotes_color: #cebfb9;
 			padding: 35px 15px 35px 15px;
 
 			@include respond-to( small ) {
-				padding: 35px 70px 0px 70px;
+				padding: 35px 70px 35px 70px;
 			}
 
 			.quotes-dlx-button-icon {
