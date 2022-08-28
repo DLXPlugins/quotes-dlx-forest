@@ -1,0 +1,569 @@
+@import "./breakpoints-mixin.scss";
+
+$primary_color: #3A4928;
+$secondary_color: #6d4a3b;
+$accent: #cc7000;
+$border_color: #685046;
+$text_color: #FFFFFF;
+$white: #ffffff;
+$dark: #000000;
+$dark-purple: #FFFFFF;
+$button_border_color: #DDDDDD;
+$button_primary_color: #6d4a3b;
+$button_secondary_color: #FFFFFF;
+$button_primary_text_color: #FFFFFF;
+$button_secondary_text_color: $primary_color;
+
+.quotes-dlx-block-theme-forest {
+	font-size: var( --qdlx-forest-font-size-mobile, 14px );
+	@include respond-to('medium') {
+		font-size: var( --qdlx-forest-font-size-tablet, 15px );
+	}
+	@include respond-to('large') {
+		font-size: var( --qdlx-forest-font-size-desktop, 16px );
+	}
+
+	/* If these are set, we're in a preview */
+	&.quotes-dlx-screen-mobile {
+		font-size: var( --qdlx-forest-font-size-mobile, 14px ) !important;
+
+		.quotes-dlx-button {
+			font-size: var( --qdlx-forest-button-font-size-mobile, 14px ) !important;
+		}
+		
+		.quotes-dlx-button-wrapper {
+			justify-content: center !important;
+		}
+
+		.quotes-dlx-button-icon {
+			font-size: var( --qdlx-forest-button-font-size-mobile, 14px ) !important;
+			top: calc(50% - (0.125em + (var(--qdlx-forest-button-font-size-mobile, 14px) / 2))) !important;
+		}
+	}
+	&.quotes-dlx-screen-tablet {
+		font-size: var( --qdlx-forest-font-size-tablet, 15px ) !important;
+		.quotes-dlx-button {
+			font-size: var( --qdlx-forest-button-font-size-tablet, 15px ) !important;
+		}
+
+		.quotes-dlx-button-wrapper {
+			justify-content: center !important;
+		}
+
+		.quotes-dlx-button-icon {
+			font-size: var( --qdlx-forest-button-font-size-tablet, 15px ) !important;
+			top: calc(50% - (0.125em + (var(--qdlx-forest-button-font-size-tablet, 15px) / 2))) !important;
+		}
+	}
+	&.quotes-dlx-screen-desktop {
+		font-size: var( --qdlx-forest-font-size-desktop, 16px ) !important;
+		.quotes-dlx-button {
+			font-size: var( --qdlx-forest-button-font-size-desktop, 16px ) !important;
+		}
+
+		.quotes-dlx-button-wrapper {
+			justify-content: center !important;
+		}
+
+		.quotes-dlx-button-icon {
+			font-size: var( --qdlx-forest-button-font-size-desktop, 16px ) !important;
+			top: calc(50% - (0.125em + (var(--qdlx-forest-button-font-size-desktop, 16px) / 2))) !important;
+		}
+	}
+
+	&.quotes-dlx-context-menu-disabled .quotes-dlx-wrapper .quotes-dlx-text-wrapper {
+		padding-right: 0;
+	}
+
+	.quotes-dlx-text-wrapper {
+		a {
+			color: var( --qdlx-forest-accent, #ff6900 );
+			text-transform: none;
+			padding-bottom: 4px;
+			border-bottom: 2px solid transparent;
+			transition: all .35s ease-in-out;
+
+			&:hover {
+				transition: all 0.35s ease-in-out;
+				color: var( --qdlx-forest-accent, #ff6900 );
+				border-bottom: 2px solid var( --qdlx-forest-accent, #ff6900 );
+			}
+		}
+	}
+
+	.quotes-dlx-wrapper {
+		position: relative;
+		background: transparent;
+
+
+
+		.quotes-dlx-content-wrapper {
+			position: relative;
+			margin: 0;
+			border: 10px solid var( --qdlx-forest-border-color, $secondary_color);
+			border-radius: 15px;
+			background: var( --qdlx-forest-inner-background-color, $white );
+			-webkit-box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color ); 
+			box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color );
+			z-index: 1;
+		}
+		figure {
+			margin: 0;
+			z-index: 1;
+		}
+		figure:before {
+			display: block;
+			content: ' ';
+			position: absolute;
+			width: calc(100% - 200px);
+			height: calc(100% + 30px );
+			background: var( --qdlx-forest-inner-background-color, $white );
+			left: 100px;
+			right: 100px;
+			z-index: -1;
+			top: -15px;
+		}
+
+		// figure:before {
+		// 	display: inline-block;
+		// 	content: '\201C';
+		// 	position: absolute;
+		// 	border: 1px solid var( --qdlx-forest-secondary, $secondary_color );
+		// 	border-radius: 100%;
+		// 	background-color: var( --qdlx-forest-primary, $secondary_color );
+		// 	color: var( --qdlx-forest-text-color, $white );
+		// 	width: 100px;
+		// 	height: 100px;
+		// 	font-size: 95px;
+		// 	line-height: 145px;
+		// 	font-family: serif;
+		// 	text-align: center;
+		// 	top: -50px;
+		// 	left: calc(50% - 50px );
+		// 	z-index: 2;
+		// }
+
+		figure blockquote.quotes-dlx-text-wrapper {
+			font-family: var( --qdlx-forest-primary-font-family, var( --qdlx-primary-font-family, inherit ) );
+			font-weight: 300;
+			font-size: 1.4em;
+			line-height: var( --qdlx-forest-line-height-mobile, 1.2 );
+			background: var( --qdlx-forest-primary, $primary_color );
+			color: var( --qdlx-forest-text, $text_color );
+			border: 0;
+			border-radius: 5px 5px 0px 0px;
+			-webkit-box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color ); 
+			box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color );
+			quotes: none;
+			vertical-align:baseline;
+			font-style: inherit;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-top: 20px;
+			margin-bottom: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding: 35px 70px 0px 70px;
+			text-align: center;
+
+			@include respond-to('medium') {
+				font-size: 1.35em;
+				line-height: var( --qdlx-forest-line-height-tablet, 1.35 );
+			}
+			@include respond-to('large') {
+				font-size: 1.5em;
+				line-height: var( --qdlx-forest-line-height-desktop, 1.65 );
+			}
+		}
+		.quotes-dlx-button-wrapper {
+			display: flex;
+			margin-top: 30px;
+			position: relative;
+			background: var( --qdlx-forest-primary, $primary_color );
+			margin-left: 18px;
+			margin-right: 18px;
+			margin-top: 0px;
+			margin-bottom: 20px;
+			padding: 35px 70px 35px 70px;
+
+			.quotes-dlx-button-icon {
+				position: absolute;
+				width: 1.2em;
+				height: 1.2em;
+				top: calc(50% + 6px - 0.9em);
+				bottom: 0;
+				right: 20px;
+
+				svg path,
+				svg use {
+					fill: var( --qdlx-forest-button-primary-text-color, $button_primary_text_color );
+					transition: all 0.3s ease-in-out;
+				}
+			}
+
+			.quotes-dlx-button-container {
+				position: relative;
+				display: inline-block;
+				justify-content: center;
+			}
+
+			&.left {
+				justify-content: flex-start;
+			}
+
+			&.right {
+				justify-content: flex-end;
+			}
+
+			&.center {
+				justify-content: center;
+			}
+		}
+
+		.quotes-dlx-button {
+			position: relative;
+			background: var( --qdlx-forest-button-primary-color, $button_primary_color );
+			color: var( --qdlx-forest-button-primary-text-color, $button_primary_text_color );
+			padding: 12px 25px;
+			border-radius: 4px;
+			border: 1px solid var( --qdlx-forest-button-primary-border-color, $button_border_color );
+			display: inline-block;
+			transition: all 0.3s ease-in-out;
+			font-family: var( --qdlx-forest-secondary-font-family, var( --qdlx-secondary-font-family, inherit ) );
+			font-weight: 400;
+			font-size: var( --qdlx-forest-button-font-size-mobile, 14px );
+			line-height: 1.0em;
+
+			@include respond-to('medium') {
+				font-size: var( --qdlx-forest-button-font-size-tablet, 15px );
+			}
+			@include respond-to('large') {
+				font-size: var( --qdlx-forest-button-font-size-desktop, 16px);
+			}
+
+			&:hover {
+				transition: all 0.3s ease-in-out;
+				color: var( --qdlx-forest-button-secondary-text-color, $button_secondary_text_color );
+				background: var( --qdlx-forest-button-secondary-color, $button_secondary_color );
+
+				svg path,
+				svg use {
+					fill: var( --qdlx-forest-button-secondary-text-color, $button_secondary_text_color );
+					transition: all 0.3s ease-in-out;
+				}
+			}
+
+			&:not(.text):not(.icon) {
+				&.quotes-dlx-button-icon-left {
+					.quotes-dlx-button-icon {
+						right: auto;
+						left: 15px;
+					}
+
+					.quotes-dlx-button-text {
+						display: inline-block;
+						padding-left: 28px;
+						padding-right: 0;
+					}
+				}
+			}
+
+			&.icon {
+				padding: 8px 20px;
+				line-height: 0;
+
+				.quotes-dlx-button-icon {
+					position: relative;
+					top: auto;
+					bottom: auto;
+					right: auto;
+					padding: 0;
+					margin: 0;
+				}
+			}
+
+			&.full .quotes-dlx-button-text {
+				display: inline-block;
+				padding-right: 28px;
+			}
+
+			&.text .quotes-dlx-button-text {
+				display: inline-block;
+				padding-right: 0;
+			}
+		}
+
+		.quotes-dlx-meatball-menu {
+			top: 90px;
+			right: calc(1.875em + 50px);
+		}
+
+		.quotes-dlx-meatball-content {
+			position: relative;
+			min-width: 100%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			display: flex;
+
+			input {
+				position: relative;
+				display: block;
+				min-width: 40px;
+				min-height: 40px;
+				right: 0;
+				top: 0;
+				z-index: 3;
+				order: 3;
+				opacity: 0;
+
+				& ~ ul {
+					z-index: -1;
+					list-style-type: none;
+					width: 0;
+				}
+
+				&:not(:checked) ~ ul {
+					background: var( --qdlx-forest-light, $white );
+					position: relative;
+					transition: opacity 0.75s ease-in-out;
+					margin-right: 2px;
+					margin-top: 0;
+					border-radius: 5px;
+					opacity: 0;
+					visibility: hidden;
+					height: 0;
+					overflow: hidden;
+					border-radius: 5px;
+					width: 0;
+					li {
+						background: inherit;
+					}
+				}
+
+				&:checked ~ ul {
+					position: relative;
+					width: 100%;
+					left: 0;
+					transition: opacity 0.75s ease-in-out;
+					opacity: 1;
+					visibility: visible;
+					height: 100%;
+					padding: 0;
+					margin: 0;
+					border-radius: 5px;
+					margin-right: 12px;
+					background: var( --qdlx-forest-light, $white );
+					border: 1px solid var( --qdlx-forest-secondary, $button_secondary_color );
+					z-index: 10;
+				}
+			}
+
+			input ~ .quotes-dlx-meatball-icon-wrapper {
+				z-index: 2;
+				& > div {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					top: 0;
+		
+					&:before,
+					&:after,
+					span {
+						content: '';
+						display: inline-block;
+						width: 5px;
+						height: 5px;
+						border-radius: 100%;
+						transform: rotate(0deg);
+						transition: all 0.3s ease-in-out;
+						background: var( --qdlx-forest-light, $white );
+						margin-right: 5px;
+					}
+					&:after {
+						margin-bottom: 0;
+						margin-right: 0;
+					}
+				}
+			}
+
+			input:checked ~ .quotes-dlx-meatball-icon-wrapper {
+
+				& > div {
+					transition: all 0.3s linear;
+					&:before,
+					&:after,
+					span {
+						transition: all 0.3s linear;
+						background: var( --qdlx-forest-light, $white );
+					}
+		
+					&:after {
+						position: absolute;
+						transition: all 0.3s linear;
+						border-radius: 2px;
+						height: 4px;
+						z-index: 1;
+						width: 50%;
+						height: 4px;
+						bottom: unset;
+						transform: rotate(-45deg) translate(0px, 0px);
+					}
+				
+					&:before {
+						position: absolute;
+						transition: all 0.3s linear;
+						border-radius: 2px;
+						height: 4px;
+						z-index: 3;
+						width: 50%;
+						height: 4px;
+						margin: 0;
+						bottom: unset;
+						transform: rotate(45deg) translate(0px, 0px);
+					}
+				}
+				
+		
+				span {
+					width: 0;
+					height: 0;
+					opacity: 0;
+				}
+			}
+	
+			li.quotes-dlx-meatball-menu-item {
+				border-bottom: 0;
+	
+				button.button-reset {
+					color: var( --qdlx-forest-dark, $dark );
+	
+					&:hover {
+						background: var( --qdlx-forest-secondary, $secondary_color );
+						color: var( --qdlx-forest-light, $white );
+	
+						svg use {
+							fill: var( --qdlx-forest-light, $white );
+						}
+					}
+				}
+			}
+	
+			input {
+				cursor: pointer;
+	
+				&:hover {
+					.quotes-dlx-meatball-icon-wrapper {
+						background: var( --qdlx-forest-light, $white );
+	
+	
+					}
+				}
+			}
+	
+			input:hover~.quotes-dlx-meatball-icon-wrapper {
+				background: var( --qdlx-forest-light, $white );
+	
+				&>div {
+	
+					&:before,
+					&:after,
+					span {
+						transition: all 0.3s linear;
+						background: var( --qdlx-forest-secondary, $secondary_color );
+					}
+				}
+			}
+
+			input:checked~.quotes-dlx-meatball-icon-wrapper {
+				max-width: 30px;
+				max-height: 30px;
+			}
+	
+			input~.quotes-dlx-meatball-icon-wrapper {
+	
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: flex;
+				z-index: 2;
+				padding: 20px;
+				background: transparent;
+				box-shadow: none;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 1;
+				appearance: none;
+				outline: none;
+				cursor: pointer;
+				font-size: 0;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				max-width: 30px;
+				max-height: 30px;
+				transition: all 0.3s linear;
+				box-sizing: border-box;
+	
+				&:hover {
+					transition: all 0.3s linear;
+					background: var( --qdlx-forest-light, $white );
+	
+					&>div {
+	
+						&:before,
+						&:after,
+						span {
+							transition: all 0.3s linear;
+	
+							&:before,
+							&:after {
+								background: var( --qdlx-forest-secondary, $secondary_color );
+							}
+						}
+					}
+				}
+	
+				&>div {
+	
+					&:before,
+					&:after,
+					span {
+						transition: all 0.3s linear;
+						background: var( --qdlx-forest-light, $white );
+					}
+				}
+	
+			}
+	
+			input:checked~.quotes-dlx-meatball-icon-wrapper {
+				background: var( --qdlx-forest-light, $white );
+	
+				&>div {
+	
+					&:before,
+					&:after,
+					span {
+						transition: all 0.3s linear;
+						background: var( --qdlx-forest-secondary, $secondary_color );
+					}
+	
+					span {
+	
+						&:before,
+						&:after {
+							display: inline-block;
+							background: var( --qdlx-forest-secondary, $secondary_color );
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,40 @@
+{
+  "name": "quotes-dlx-themes-forest",
+  "version": "1.0.0",
+  "description": "A green forest theme for Quotes",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DLXPlugins/quotes-dlx.git"
+  },
+  "keywords": [
+    "Tweet",
+    "Quote",
+    "Quotes",
+    "WordPress",
+    "Block"
+  ],
+  "author": "Ronald Huereca",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/dlxplugins/quotes-dlx/issues"
+  },
+  "homepage": "https://quotesdlx.com",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "path": "^0.12.7",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.54.5",
+    "sass-loader": "^13.0.2",
+    "webpack-remove-empty-scripts": "^0.8.1"
+  },
+  "dependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

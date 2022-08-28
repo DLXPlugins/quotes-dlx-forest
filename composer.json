@@ -1,0 +1,20 @@
+{
+    "name": "mediaronllc/quotes-dlx-forest-theme",
+    "description": "A beautiful brown and green theme.",
+    "type": "project",
+    "license": "GPL3+",
+    "authors": [
+        {
+            "name": "Ronald Huereca",
+            "email": "ronald@mediaron.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib"
+    },
+      "autoload": {
+        "psr-4": {
+            "MediaRonLLC\\QuotesDLXThemes\\": "./"
+        }
+    }
+}
