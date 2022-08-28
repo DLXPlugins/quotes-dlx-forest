@@ -274,6 +274,11 @@ class Themes_Forest extends Themes_Addon {
 				'color' => '#FFFFFF',
 			),
 			array(
+				'name'  => __( 'Quotes Color', 'quotes-dlx' ),
+				'slug'  => 'quotes-color',
+				'color' => '#cebfb9',
+			),
+			array(
 				'name'  => __( 'Border Color', 'quotes-dlx' ),
 				'slug'  => 'border-color',
 				'color' => '#685046',

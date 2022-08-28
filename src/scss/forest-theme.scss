@@ -13,6 +13,7 @@ $button_primary_color: #6d4a3b;
 $button_secondary_color: #FFFFFF;
 $button_primary_text_color: #FFFFFF;
 $button_secondary_text_color: $primary_color;
+$quotes_color: #cebfb9;
 
 .quotes-dlx-block-theme-forest {
 	font-size: var( --qdlx-forest-font-size-mobile, 14px );
@@ -75,6 +76,18 @@ $button_secondary_text_color: $primary_color;
 		padding-right: 0;
 	}
 
+	&.quotes-dlx-has-no-tweet-button {
+		.quotes-dlx-wrapper {
+			.quotes-dlx-button-wrapper {
+				display: none;
+			}
+			figure blockquote.quotes-dlx-text-wrapper {
+				padding-bottom: 35px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
 	.quotes-dlx-text-wrapper {
 		a {
 			color: var( --qdlx-forest-accent, #ff6900 );
@@ -106,6 +119,36 @@ $button_secondary_text_color: $primary_color;
 			-webkit-box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color ); 
 			box-shadow: 0px 0px 2px 2px var( --qdlx-forest-border-color, $border_color );
 			z-index: 1;
+		}
+		.quotes-dlx-content-wrapper:before {
+			display: inline-block;
+			content: '\201C';
+			position: absolute;
+			color: var( --qdlx-forest-quotes-color, $quotes_color );
+			width: 70px;
+			height: 70px;
+			font-size: 95px;
+			line-height: 130px;
+			font-family: serif;
+			text-align: center;
+			z-index: 2;
+			left: 30px;
+			top: 15px;
+		}
+		.quotes-dlx-content-wrapper:after {
+			display: inline-block;
+			content: '\201d';
+			position: absolute;
+			color: var( --qdlx-forest-quotes-color, $quotes_color );
+			width: 70px;
+			height: 70px;
+			font-size: 95px;
+			line-height: 130px;
+			font-family: serif;
+			text-align: center;
+			z-index: 2;
+			right: 30px;
+			bottom: 30px;
 		}
 		figure {
 			margin: 0;
