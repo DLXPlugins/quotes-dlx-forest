@@ -314,16 +314,6 @@ class Themes_Forest extends Themes_Addon {
 				'color' => '#DDDDDD',
 			),
 			array(
-				'name'  => __( 'Quote Bubble', 'quotes-dlx' ),
-				'slug'  => 'quote-bubble',
-				'color' => '#1DA1F2',
-			),
-			array(
-				'name'  => __( 'Quote Bubble Inner Color', 'quotes-dlx' ),
-				'slug'  => 'quote-bubble-inner-color',
-				'color' => '#FFFFFF',
-			),
-			array(
 				'name'  => __( 'Light', 'quotes-dlx' ),
 				'slug'  => 'light',
 				'color' => '#FFFFFF',
