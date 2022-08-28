@@ -246,7 +246,7 @@ $quotes_color: #cebfb9;
 			padding: 35px 15px 35px 15px;
 
 			@include respond-to( small ) {
-				padding: 35px 70px 35px 70px;
+				padding-left: 40px;
 			}
 
 			.quotes-dlx-button-icon {
@@ -357,23 +357,24 @@ $quotes_color: #cebfb9;
 		}
 
 		.quotes-dlx-meatball-menu {
-			top: 55px;
-			right: calc(1.875em + 42px);
+			top: 1.875em;
+			right: calc(1.875em + 35px);
 	
 			@include respond-to( xs ) {
-				top: 60px;
+				top: 1.875em;
+				right: calc(1.875em + 15px);
 			}
 			@include respond-to( small ) {
-				top: 70px;
-				right: 35px;
+				top: 1.875em;
+				right: calc(1.875em + 15px);
 			}
 			@include respond-to( medium ) {
-				top: 70px;
-				right: 35px;
+				top: 1.875em;
+				right: calc(1.875em + 15px);
 			}
 			@include respond-to( large ) {
-				top: 70px;
-				right: 35px;
+				top: 1.875em;
+				right: calc(1.875em + 15px);
 			}
 		}
 
@@ -384,6 +385,7 @@ $quotes_color: #cebfb9;
 			top: 0;
 			right: 0;
 			display: flex;
+
 
 			input {
 				position: relative;
@@ -454,6 +456,7 @@ $quotes_color: #cebfb9;
 					height: 100%;
 					z-index: 2;
 					top: 0;
+					justify-content: center;
 		
 					&:before,
 					&:after,
@@ -472,6 +475,10 @@ $quotes_color: #cebfb9;
 						margin-bottom: 0;
 						margin-right: 0;
 					}
+				}
+				.quotes-dlx-meatball-icon {
+					max-width: 40px;
+					max-height: 40px;
 				}
 			}
 
@@ -547,6 +554,8 @@ $quotes_color: #cebfb9;
 	
 					}
 				}
+
+				
 			}
 	
 			input:hover~.quotes-dlx-meatball-icon-wrapper {
@@ -564,8 +573,8 @@ $quotes_color: #cebfb9;
 			}
 
 			input:checked~.quotes-dlx-meatball-icon-wrapper {
-				max-width: 30px;
-				max-height: 30px;
+				max-width: 40px;
+				max-height: 40px;
 			}
 	
 			input~.quotes-dlx-meatball-icon-wrapper {
@@ -593,10 +602,6 @@ $quotes_color: #cebfb9;
 				max-height: 30px;
 				transition: all 0.3s linear;
 				box-sizing: border-box;
-
-				@include respond-to( small ) {
-					padding: 35px 70px 0px 70px;
-				}
 	
 				&:hover {
 					transition: all 0.3s linear;

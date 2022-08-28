@@ -11,7 +11,7 @@ use MediaRonLLC\QuotesDLX\Functions as Functions;
 use MediaRonLLC\QuotesDLX\Themes\Themes_Addon as Themes_Addon;
 
 /**
- * Holds variables for the light branded theme.
+ * Holds variables for the Forest theme.
  */
 class Themes_Forest extends Themes_Addon {
 
@@ -77,14 +77,14 @@ class Themes_Forest extends Themes_Addon {
 	 *
 	 * @var int $full_width Image width of full-size image.
 	 */
-	protected static $full_width = 750;
+	protected static $full_width = 900;
 
 	/**
 	 * Large Image height. Used for previews.
 	 *
 	 * @var int $full_height Image height of full-size image.
 	 */
-	protected static $full_height = 421;
+	protected static $full_height = 500;
 
 	/**
 	 * Theme color or gradient.
@@ -133,7 +133,7 @@ class Themes_Forest extends Themes_Addon {
 	 *
 	 * @since  1.0.0
 	 *
-	 * @return Themes_Light_Branded $instance An instance of the Themes_Light_Branded class
+	 * @return ThemesForest $instance An instance of the Themes_Light_Branded class
 	 */
 	public static function get_instance() {
 
@@ -176,8 +176,7 @@ class Themes_Forest extends Themes_Addon {
 	 * Get the image preview URL.
 	 */
 	protected static function get_preview_image_url() {
-		// todo - change
-		return Functions::get_plugin_url( 'images/core-theme-light-branded.jpg' );
+		return plugins_url( 'images/forest-theme-preview.jpg', dirname( __FILE__ ) );
 	}
 
 	/**
