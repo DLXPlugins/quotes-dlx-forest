@@ -41,4 +41,4 @@ function theme_registration_init() {
 	// Init filter to add a theme to the defaults.
 	add_filter( 'quotes_dlx_themes', __NAMESPACE__ . '\add_themes' );
 }
-add_filter( 'quotes_dlx_pre_themes_loaded', __NAMESPACE__ . '\theme_registration_init' );
+add_action( 'quotes_dlx_pre_themes_loaded', __NAMESPACE__ . '\theme_registration_init' );
