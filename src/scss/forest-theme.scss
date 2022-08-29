@@ -179,25 +179,6 @@ $quotes_color: #cebfb9;
 			}
 		}
 
-		// figure:before {
-		// 	display: inline-block;
-		// 	content: '\201C';
-		// 	position: absolute;
-		// 	border: 1px solid var( --qdlx-forest-secondary, $secondary_color );
-		// 	border-radius: 100%;
-		// 	background-color: var( --qdlx-forest-primary, $secondary_color );
-		// 	color: var( --qdlx-forest-text-color, $white );
-		// 	width: 100px;
-		// 	height: 100px;
-		// 	font-size: 95px;
-		// 	line-height: 145px;
-		// 	font-family: serif;
-		// 	text-align: center;
-		// 	top: -50px;
-		// 	left: calc(50% - 50px );
-		// 	z-index: 2;
-		// }
-
 		figure blockquote.quotes-dlx-text-wrapper {
 			font-family: var( --qdlx-forest-primary-font-family, var( --qdlx-primary-font-family, inherit ) );
 			font-weight: 300;
