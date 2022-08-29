@@ -13,7 +13,7 @@ This theme is a separate plugin from QuotesDLX and must be installed/activated.
 
 You can fork this repository to create your own theme. Most use-cases are covered and the build scripts are easy to setup (and optional).
 
-For creating a theme, please see <a href="https://docs.dlxplugins.com/v/quotes-dlx/themes/creating-your-own-theme">the documentation on creating your own theme.
+For creating a theme, please see <a href="https://docs.dlxplugins.com/v/quotes-dlx/themes/creating-your-own-theme">the documentation on creating your own theme</a>.
 
 You can also check out a <a href="https://docs.dlxplugins.com/v/quotes-dlx/themes/themes-overview">theme overview of how QuotesDLX handles its themes</a>.
 
@@ -73,7 +73,7 @@ quotes-dlx-forest-theme
 │  └─ Themes_Forest.php   
 ```
 
-For more information on this file, please see <a href="https://docs.dlxplugins.com/v/quotes-dlx/themes/creating-your-own-theme">the documentation on creating your own theme.
+For more information on this file, please see <a href="https://docs.dlxplugins.com/v/quotes-dlx/themes/creating-your-own-theme">the documentation on creating your own theme</a>.
 
 You can create your own subdirectories and initialization files if you should choose to have more than one theme in your custom plugin.
 
