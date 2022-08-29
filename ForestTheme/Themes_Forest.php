@@ -1,13 +1,12 @@
 <?php
 /**
- * Initialization for the light theme.
+ * Initialization for the forest theme.
  *
  * @package quotes-dlx
  */
 
 namespace MediaRonLLC\QuotesDLXThemes\ForestTheme;
 
-use MediaRonLLC\QuotesDLX\Functions as Functions;
 use MediaRonLLC\QuotesDLX\Themes\Themes_Addon as Themes_Addon;
 
 /**
@@ -93,40 +92,13 @@ class Themes_Forest extends Themes_Addon {
 	 */
 	protected static $preview_gradient = 'linear-gradient(90deg, rgba(58,73,40,1) 14%, rgba(109,74,59,1) 85%);';
 
-	/**
-	 * Preview URL image for theme.
-	 *
-	 * @var string $preview_image_url The theme preview image URL.
-	 */
-	protected static $preview_image_url = '';
+/**
+ * Preview URL image for theme.
+ *
+ * @var string $preview_image_url The theme preview image URL.
+ */
+protected static $preview_image_url = '';
 
-	/**
-	 * Stylesheet URL for enqueuing.
-	 *
-	 * @var string $stylesheet_url The stylesheet URL. Set 'core' for now stylesheet.
-	 */
-	protected static $stylesheet_url = 'core';
-
-	/**
-	 * Primary Color (hex code) for the theme.
-	 *
-	 * @var string $primary_color Primary color of theme.
-	 */
-	protected static $primary_color = '#1DA1F2';
-
-	/**
-	 * Secondary Color (hex code) for the theme.
-	 *
-	 * @var string $secondary_color Secondary color of theme.
-	 */
-	protected static $secondary_color = '#2B2B2B';
-
-	/**
-	 * Accent Color (hex code) for the theme.
-	 *
-	 * @var string $accent_color Accent color of theme.
-	 */
-	protected static $accent_color = '#657786';
 
 	/**
 	 * Returns an instance of this class, and stores it in the $instance property.
